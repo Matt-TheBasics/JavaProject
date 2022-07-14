@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="689.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.student.scrabblefour.ScrabbleController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <MenuBar VBox.vgrow="ALWAYS">
+     <menus>
+       <Menu mnemonicParsing="false" text="File">
+           <items>
+               <Menu mnemonicParsing="false" text="New game">
+                 <items>
+                   <MenuItem fx:id="miTwenty" mnemonicParsing="false" onAction="#ClickNewGameFifty" text="First to 50" ></MenuItem>
+                 </items>
+               </Menu>
+               <MenuItem fx:id="mbClose" mnemonicParsing="false" text="Close" />
+           </items>
+       </Menu>
+     </menus>
+   </MenuBar>
+   <Pane prefHeight="654.0" prefWidth="906.0">
+      <children>
+         <TextField fx:id="p1input" layoutX="105.0" layoutY="258.0" />
+         <Button fx:id="btnP1" layoutX="105.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#CheckP1Click" prefHeight="25.0" prefWidth="149.0" text="Check my word!" />
+         <ListView fx:id="chosenWords" layoutX="353.0" layoutY="14.0" prefHeight="514.0" prefWidth="200.0" />
+         <TextField fx:id="p2input" layoutX="657.0" layoutY="252.0" />
+         <Button fx:id="btnP2" layoutX="657.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#CheckP2Click" prefHeight="25.0" prefWidth="149.0" text="Check my word!" />
+         <Label fx:id="lblScore1" layoutX="166.0" layoutY="122.0">
+            <font>
+               <Font name="Courier New" size="24.0" />
+            </font>
+         </Label>
+         <Label fx:id="lblScore2" layoutX="717.0" layoutY="122.0">
+          <font>
+             <Font name="Courier New" size="24.0" />
+          </font>
+          </Label>
+      </children>
+   </Pane>
+</VBox>
